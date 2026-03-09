@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Yellowtail&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-pixel: "Press Start 2P", system-ui, monospace;
+  --font-script: "Yellowtail", cursive;
+}
+
+body {
+  background: linear-gradient(180deg, #4facfe 0%, #b829ea 100%);
+  background-attachment: fixed;
+  color: #fff;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Horizontal glitch lines */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 4px,
+    rgba(0, 0, 0, 0.1) 4px,
+    rgba(0, 0, 0, 0.1) 8px
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+@layer utilities {
+  .text-gradient-synth {
+    background: linear-gradient(
+      to bottom,
+      #ffea00 0%,
+      #ff2a00 40%,
+      #001155 50%,
+      #00aaff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-shadow-script {
+    text-shadow:
+      3px 3px 0px #ff00ff,
+      4px 4px 0px #ff00ff;
+    -webkit-text-stroke: 1px #fff;
+  }
+
+  .text-extrusion {
+    -webkit-text-stroke: 10px white;
+    text-shadow:
+      0 1px 0 #001f4d,
+      0 2px 0 #001f4d,
+      0 3px 0 #001f4d,
+      0 4px 0 #001f4d,
+      0 5px 0 #001f4d,
+      0 6px 0 #001f4d,
+      0 7px 0 #001f4d,
+      0 8px 0 #001f4d,
+      0 9px 0 #001f4d,
+      0 10px 0 #001f4d,
+      0 11px 0 #001f4d,
+      0 12px 0 #001f4d,
+      0 13px 0 #001f4d,
+      0 14px 0 #001f4d,
+      0 25px 20px rgba(0, 0, 0, 0.6);
+  }
+
+  .box-shadow-synthwave {
+    box-shadow:
+      0 0 15px rgba(0, 255, 255, 0.3),
+      inset 0 0 10px rgba(0, 255, 255, 0.2);
+  }
+}
+
+/* Synthwave Sun */
+.sun-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ff00ff 0%, #00ffff 100%);
+  box-shadow: 0 0 60px rgba(255, 0, 255, 0.6);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.sun-grid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(transparent 90%, rgba(0, 255, 255, 0.5) 90%),
+    linear-gradient(90deg, transparent 90%, rgba(0, 255, 255, 0.5) 90%);
+  background-size: 20px 20px;
+}
