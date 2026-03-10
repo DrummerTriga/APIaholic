@@ -35,7 +35,7 @@ const StarWars = () => {
     <>
       <div
         className="w-full min-h-screen bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/bg_space.jpg')" }}
+        style={{ backgroundImage: "url('/starWars/bg_space.jpg')" }}
       >
         {tabs && <NavBarStarWars tabs={tabs} />}
         <IntroStarWars />

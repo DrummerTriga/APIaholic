@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import marvel_cover from "../../public/marvel_cover.jpg";
 import pokemon_cover from "../../public/pokemon_cover.jpg";
 import rickmorty_cover from "../../public/rickmorty_cover.jpg";
-import star_wars_cover from "../../public/star_wars_cover.jpg";
+import star_wars_cover from "../../public/starWars/star_wars_cover.jpg";
 
 const apis = [
   {
