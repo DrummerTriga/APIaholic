@@ -1,9 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Yellowtail&display=swap");
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Yellowtail&display=swap");
+
+@font-face {
+  font-family: 'Star Wars';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.cdnfonts.com/s/88396/Star%20Wars.woff') format('woff');
+}
 
 @theme {
   --font-pixel: "Press Start 2P", system-ui, monospace;
   --font-script: "Yellowtail", cursive;
+  --font-starwars: "Star Wars", sans-serif;
+  --font-news: "News Cycle", sans-serif;
+  --font-oswald: "Oswald", sans-serif;
 }
 
 body {
@@ -23,26 +34,22 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 4px,
-    rgba(0, 0, 0, 0.1) 4px,
-    rgba(0, 0, 0, 0.1) 8px
-  );
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 4px,
+      rgba(0, 0, 0, 0.1) 4px,
+      rgba(0, 0, 0, 0.1) 8px);
   pointer-events: none;
   z-index: -1;
 }
 
 @layer utilities {
   .text-gradient-synth {
-    background: linear-gradient(
-      to bottom,
-      #ffea00 0%,
-      #ff2a00 40%,
-      #001155 50%,
-      #00aaff 100%
-    );
+    background: linear-gradient(to bottom,
+        #ffea00 0%,
+        #ff2a00 40%,
+        #001155 50%,
+        #00aaff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
