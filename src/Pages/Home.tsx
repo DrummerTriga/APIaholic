@@ -49,15 +49,15 @@ export default function Home() {
 
         {/* Text Overlay */}
         <div className="relative z-10 flex items-center justify-center w-full">
-          <div className="relative inline-block font-pixel text-5xl md:text-7xl lg:text-8xl tracking-tighter">
+          <div className="relative mt-14 inline-block font-pixel text-5xl md:text-7xl lg:text-8xl tracking-tighter">
             {/* API - Absolutely positioned to float over AHOLIC */}
-            <h2 className="absolute -top-16 md:-top-22 lg:-top-26 left-1/2 transform -translate-x-1/2 -rotate-6 font-script text-7xl md:text-9xl text-[#00ffff] text-shadow-script z-20 whitespace-nowrap">
+            <h2 className="absolute -top-14 md:-top-22 lg:-top-26 left-1/2 transform -translate-x-1/2 -rotate-6 font-script text-7xl md:text-9xl text-[#00ffff] text-shadow-script z-20 whitespace-nowrap">
               API
             </h2>
 
             {/* Shadow and Extrusion */}
             <span
-              className="absolute top-0 left-0 text-[#001f4d] text-extrusion"
+              className="absolute top- left-0 text-[#001f4d] text-extrusion"
               aria-hidden="true"
             >
               AHOLIC
@@ -82,7 +82,11 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <Link to={api.path} className="block group">
+            <Link
+              to={api.path}
+              className="block group"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               <div className="relative overflow-hidden rounded-xl border-2 border-[#00ffff] bg-[#1a0b2e]/80 backdrop-blur-md box-shadow-synthwave transition-all duration-300 group-hover:border-[#ff00ff] group-hover:scale-105 group-hover:shadow-[0_0_25px_rgba(255,0,255,0.5),inset_0_0_15px_rgba(255,0,255,0.3)]">
                 <div className="aspect-video relative overflow-hidden border-b-2 border-[#00ffff] group-hover:border-[#ff00ff] transition-colors duration-300">
                   <img

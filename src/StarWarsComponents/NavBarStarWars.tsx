@@ -1,12 +1,9 @@
 import { ArrowLeft } from "lucide-react";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router";
+import type { NavBarProps } from "../types/starwars";
 
-interface NavBarProps {
-  tabs: { [key: string]: string };
-}
-
-const NavBarStarWars = ({ tabs }: NavBarProps) => {
+const NavBarStarWars = ({ tabs, setActiveTab }: NavBarProps) => {
   const navigate = useNavigate();
   return (
     <>
@@ -17,7 +14,7 @@ const NavBarStarWars = ({ tabs }: NavBarProps) => {
         className="flex justify-around border-b border-[#333] bg-black/80 backdrop-blur-md sticky top-0 z-50"
       >
         <div
-          className="flex justify-center items-center h-12 my-5 w-48 border-x border-gray-700 cursor-pointer hover:bg-gray-600/50 transition-all duration-300"
+          className="flex justify-center items-center h-12 my-5 w-48 border-x border-gray-700 cursor-pointer hover:rounded-xl hover:bg-gradient-to-r from-[#00ffff]/50 to-[#ff00ff]/50 transition-all duration-300"
           onClick={() => navigate("/")}
         >
           <ArrowLeft />
@@ -28,6 +25,7 @@ const NavBarStarWars = ({ tabs }: NavBarProps) => {
             <div
               key={item}
               className="flex justify-center items-center h-12 my-5 w-36 border-x border-gray-700 cursor-pointer hover:bg-gray-600/50 transition-all duration-300"
+              onClick={() => setActiveTab(item)}
             >
               {item.charAt(0).toUpperCase()}
               {item.slice(1)}
