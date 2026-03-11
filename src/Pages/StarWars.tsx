@@ -47,7 +47,9 @@ const StarWars = () => {
         {tabs && <NavBarStarWars tabs={tabs} setActiveTab={setActiveTab} />}
         {!activeTab && <IntroStarWars />}
         {activeTab &&
-          tabData?.map((item) => <h1 key={item.name}>{item.name}</h1>)}
+          tabData?.map((item) => (
+            <h1 key={item.name}>{item.name || item.title}</h1>
+          ))}
       </div>
     </>
   );
