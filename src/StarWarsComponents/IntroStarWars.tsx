@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import star_wars_logo from "../../public/star_wars_logo.png";
+import star_wars_logo from "../../public/starWars/star_wars_logo.png";
 
 const IntroStarWars = () => {
   return (
