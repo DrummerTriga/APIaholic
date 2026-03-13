@@ -1,7 +1,7 @@
 const LoadingStarWars = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] w-full gap-6">
-      <div className="w-48 md:w-64 overflow-hidden rounded-lg shadow-[0_0_20px_rgba(34,211,238,0.2)]">
+      <div className="w-56 md:w-68 overflow-hidden rounded-lg shadow-[0_0_20px_rgba(34,211,238,0.2)]">
         <img
           src="/starWars/starwars_loading.gif"
           alt="Loading..."
