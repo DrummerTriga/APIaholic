@@ -2,6 +2,9 @@
 
 A hands-on frontend project to practice fetching and displaying data from a variety of free and open APIs. Built for learning and experimentation, this project combines practical frontend skills with a playful approach to exploring APIs — after all, consuming APIs is good for our health! 🦾
 
+Check it out LIVE now: [apiaholic.gilsantos-dev.com](https://apiaholic.gilsantos-dev.com/)
+![EnpezandoGIF](https://github.com/user-attachments/assets/0ecd54c9-425b-4999-b6ca-79f6fb9b7c88)
+
 ---
 
 ## ⚡ Status
