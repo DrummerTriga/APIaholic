@@ -11,24 +11,28 @@ const apis = [
     name: "Star Wars",
     path: "/star-wars",
     image: star_wars_cover,
+    status: "initialized",
   },
   {
     id: "pokemon",
     name: "Pokemon",
-    path: "/pokemon",
+    path: "/", //under development
     image: pokemon_cover,
+    status: "under development",
   },
   {
     id: "rick-and-morty",
     name: "Rick & Morty",
-    path: "/rick-and-morty",
+    path: "/", //under development
     image: rickmorty_cover,
+    status: "under development",
   },
   {
     id: "marvel",
     name: "Marvel",
-    path: "/marvel",
+    path: "/", //under development
     image: marvel_cover,
+    status: "under development",
   },
 ];
 
@@ -103,7 +107,9 @@ export default function Home() {
                     {api.name}
                   </h2>
                   <div className="mt-4 font-script text-3xl text-[#00ffff] opacity-100 group-hover:scale-120 transition-scale duration-300">
-                    Discover more!
+                    {api.status === "under development"
+                      ? "Coming Soon"
+                      : "Discover more!"}
                   </div>
                 </div>
               </div>
