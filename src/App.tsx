@@ -1,7 +1,8 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
+import RickAndMorty from "./Pages/RickAndMorty";
 import StarWars from "./Pages/StarWars";
-import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/star-wars" element={<StarWars />} />
+        <Route path="/rick-and-morty" element={<RickAndMorty />} />
       </Routes>
       <Analytics />
     </>

@@ -14,19 +14,20 @@ const apis = [
     status: "initialized",
   },
   {
+    id: "rick-and-morty",
+    name: "Rick & Morty",
+    path: "/rick-and-morty",
+    image: rickmorty_cover,
+    status: "initialized",
+  },
+  {
     id: "pokemon",
     name: "Pokemon",
     path: "/", //under development
     image: pokemon_cover,
     status: "under development",
   },
-  {
-    id: "rick-and-morty",
-    name: "Rick & Morty",
-    path: "/", //under development
-    image: rickmorty_cover,
-    status: "under development",
-  },
+
   {
     id: "marvel",
     name: "Marvel",
